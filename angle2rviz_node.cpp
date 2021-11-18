@@ -25,7 +25,7 @@ void callback(const std_msgs::Float64::ConstPtr& msg_angle){
   msg_rviz.pose.orientation.w = q.w();
 
   publisher.publish(msg_rviz);
-  std::cout << "ok" << std::endl;
+  std::cout << "Angle: " << msg_angle->data << std::endl;
 }
 
 int main(int argc, char **argv) {
